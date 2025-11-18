@@ -1,0 +1,182 @@
+# 🔐 .gitignore - Preserv-RAG
+
+# ===== ENTORNO VIRTUAL =====
+venv/
+env/
+ENV/
+.venv
+.env
+.env.local
+.env.*.local
+
+# ===== PYTHON =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ===== BASE DE DATOS VECTORIAL =====
+data/chroma_db/
+*.parquet
+*.db
+*.sqlite
+*.sqlite3
+
+# ===== DATOS SENSIBLES =====
+data/pdfs/              # NO subir PDFs (demasiado grandes)
+*.pdf
+*.PDF
+
+# ===== STREAMLIT =====
+.streamlit/
+*.streamlit
+
+# ===== IDE Y EDITORES =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.AppleDouble
+.LSOverride
+*.sublime-project
+*.sublime-workspace
+.project
+.pydevproject
+.settings/
+*.iml
+
+# ===== LOGS Y CACHE =====
+*.log
+logs/
+*.log.gz
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ===== ARCHIVOS TEMPORALES =====
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*~
+.tmp/
+
+# ===== MACROS =====
+.DS_Store
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# ===== JUPYTER NOTEBOOKS =====
+.ipynb_checkpoints/
+*.ipynb
+
+# ===== DIRECTORIOS DE CACHÉ =====
+.cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+
+# ===== ARCHIVOS DEL SISTEMA =====
+.git/
+.gitkeep
+*.swp
+.netrwhist
+*~
+
+# ===== NODE (si usas herramientas frontend) =====
+node_modules/
+npm-debug.log
+yarn-error.log
+.npm
+
+# ===== ARCHIVOS GENERADOS =====
+*.generated.*
+*.auto.*
+output/
+results/
+temp/
+tmp/
+
+# ===== SECRETS Y CONFIG PRIVADA =====
+.secrets
+secrets.yaml
+credentials.json
+api_keys.txt
+config.local.py
+
+# ===== TESTS =====
+.tox/
+.hypothesis/
+htmlcov/
+.coverage.xml
+
+# ===== ARCHIVOS COMPRIMIDOS =====
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# ===== DIRECTORIOS GRANDES (opcionales) =====
+# Si tu BD vectorial es muy grande:
+# data/
+
+# ===== ARCHIVOS ESPECÍFICOS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+.directory
+
+# ===== ESTADÍSTICAS Y RESULTADOS =====
+stats.json
+metrics.json
+benchmark_results.json
+performance_logs.txt
+
+# ===== ARCHIVOS DE BACKUP =====
+*.bak
+*.backup
+backup/
+.backup/
+
+# ===== ARCHIVOS DE BLOQUEO =====
+.lock
+*.lock
+Pipfile.lock
+
+# ===== CARPETAS DE SALIDA NO NECESARIAS =====
+output/
+outputs/
+results/
+temp/
+tmp/
+cache/
+
+# ===== PERO SÍ TRACKEAR (excepciones) =====
+!.gitkeep
+!data/.gitkeep
+!data/pdfs/.gitkeep
